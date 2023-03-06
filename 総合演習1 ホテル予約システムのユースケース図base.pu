@@ -1,0 +1,12 @@
+@startuml 総合演習１
+    left to right direction
+    actor 利用者
+    
+    rectangle ホテル予約システム {
+        usecase (空室状況\n閲覧) as eturan
+        usecase a #FFFFFF;line:white;text:white;
+        ' 予約 ...> ログイン:<< include >>
+    }
+    利用者 ---> eturan
+
+@enduml

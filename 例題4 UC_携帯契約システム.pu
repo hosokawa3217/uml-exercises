@@ -1,0 +1,8 @@
+@startuml ユースケース図
+    'left to right direction
+    actor 顧客  #DDDDDD;line.bold;
+    actor 非会員 #DDDDDD;line.bold;
+    actor 会員  #DDDDDD;line.bold;
+    顧客 <|-- 非会員
+    顧客 <|-- 会員
+@enduml

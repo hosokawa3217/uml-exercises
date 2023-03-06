@@ -1,0 +1,16 @@
+@startuml 問題1
+    left to right direction
+    actor 利用者
+    
+    rectangle ホテル宿泊予約 {
+        usecase (<u>予約</u>\n拡張点\nキャンペーン期間) as yoyaku
+        usecase ログイン
+        usecase キャンペーン
+        
+        yoyaku ...> ログイン:<< include >>
+        yoyaku <.up.. キャンペーン:<< extend >>
+
+    }
+    利用者 ---> yoyaku
+
+@enduml

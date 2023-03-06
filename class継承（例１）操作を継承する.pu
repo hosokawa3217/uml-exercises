@@ -1,0 +1,20 @@
+@startuml
+
+class 動物 {
+  --
+歩く
+食べる
+なく
+}
+
+class イヌ {
+}
+
+class ネコ {
+}
+
+
+
+動物 <|--down- イヌ
+動物 <|--down- ネコ
+@enduml

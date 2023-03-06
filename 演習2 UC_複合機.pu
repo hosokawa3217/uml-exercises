@@ -1,0 +1,15 @@
+@startuml 演習2
+    left to right direction
+    actor ユーザー
+    rectangle 複合機 {
+        usecase コンピュータから印刷する
+        usecase FAXを送受信する
+        usecase コピーする
+        usecase 画像をスキャンする
+    }
+    コピーする <.left. 画像をスキャンする : << extend >>
+    ユーザー --> コピーする
+    ユーザー --> コンピュータから印刷する
+    ユーザー --> 画像をスキャンする
+    ユーザー --> FAXを送受信する
+@enduml

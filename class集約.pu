@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+class 会員 {
+}
+
+class 会員リスト {
+}
+
+会員リスト o--down- 会員
+@enduml
