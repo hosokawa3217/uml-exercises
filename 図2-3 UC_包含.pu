@@ -1,0 +1,8 @@
+@startuml 包含
+left to right direction
+    left to right direction
+    usecase 割引価格にする
+    usecase 購入する
+    商品リストを見る ..> ログインする:<< include >>
+
+@enduml

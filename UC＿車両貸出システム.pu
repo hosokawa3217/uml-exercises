@@ -1,0 +1,19 @@
+@startuml
+    left to right direction
+    actor 予約受付係  #DDDDDD;line:black;line.bold;
+    actor 配車係  #DDDDDD;line:black;line.bold;
+    
+    rectangle 車両貸出システム  {
+        usecase 車を予約する
+        usecase 予約をキャンセルする
+        usecase 車を貸し出す
+        usecase 車を返却する
+    }
+
+    予約受付係 ---> 車を予約する
+    予約受付係 ---> 予約をキャンセルする
+    配車係 ---> 車を貸し出す
+    配車係 ---> 車を返却する
+
+
+@enduml

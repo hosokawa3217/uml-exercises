@@ -1,0 +1,84 @@
+@startuml
+left to right direction
+  ' skinparam classAttributeIconSize 0
+
+class 注文 {}
+class 注文管理{}
+hide 注文 circle
+hide 注文管理 circle
+
+注文 <.. 注文管理 
+
+
+class パソコン {}
+class ハードディスク{}
+hide パソコン circle
+hide ハードディスク circle
+
+パソコン "1" *-- ハードディスク 
+
+class 会員リスト {
+}
+
+class 会員 {
+}
+hide 会員リスト circle
+hide 会員 circle
+
+会員リスト o-- 会員
+
+class クラスA {
+}
+
+
+class クラスB {
+  BackgroundColor White
+ - 属性1 : int
+ - 属性2 : String
+ + 属性3 : String
+ # 属性4 : String
+ 
+}
+
+
+class 従業員 {
+ - 入社年月日 : int
+ -  / 勤続年数 : int
+}
+hide 従業員 circle
+
+class クラスC {
+ ---
+ +操作1() : void
+ +操作2() : Sring
+}
+
+class クラスD {
+ - 属性1 : int
+ - 属性2 : String
+ ---
+ +操作1() : void
+ +操作2() : Sring
+}
+
+' hide numbers
+hide << ステレオタイプ >> circle
+hide クラスA circle
+hide クラスB circle
+hide クラスC circle
+hide クラスD circle
+
+class 先生 {}
+class 学生 {}
+hide 先生 circle
+hide 学生 circle
+
+先生 -- 学生
+
+class 会社 {}
+class 社員 {}
+hide 会社 circle
+hide 社員 circle
+
+会社 "1" -- "*" 社員
+@enduml

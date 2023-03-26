@@ -1,0 +1,9 @@
+@startuml 汎化
+    rectangle 図書館 {
+        usecase DVDを検索する
+        usecase 主演で検索する
+        usecase 作品名で検索する     
+      }
+    DVDを検索する <|-- 主演で検索する
+    DVDを検索する <|-- 作品名で検索する
+@enduml

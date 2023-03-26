@@ -1,0 +1,8 @@
+@startuml 関連
+
+    left to right direction
+    usecase 商品リストを見る
+    usecase ログインする
+    商品リストを見る <|-- ログインする
+    
+@enduml

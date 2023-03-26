@@ -5,11 +5,11 @@
      '/
 @startuml 演習4
     left to right direction
-    actor 出荷係
+    actor 出荷担当者
     rectangle 販売管理システム {
         usecase 注文商品を確認する
         usecase 出荷状況の登録する
     }
-    出荷係 --> 注文商品を確認する
-    出荷係 --> 出荷状況の登録する
+    出荷担当者 --> 注文商品を確認する
+    出荷担当者 --> 出荷状況の登録する
 @enduml

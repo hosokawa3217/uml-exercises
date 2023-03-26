@@ -1,0 +1,10 @@
+@startuml 包含
+left to right direction
+    left to right direction
+
+    usecase (<u>購入する</u>\nextention points\n割引期間) as 購入
+    usecase 割引価格にする
+
+    割引価格にする ..> 購入:<< extend >>
+
+@enduml

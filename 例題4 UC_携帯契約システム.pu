@@ -1,8 +1,12 @@
 @startuml ユースケース図
-    'left to right direction
-    actor 顧客  #DDDDDD;line.bold;
-    actor 非会員 #DDDDDD;line.bold;
-    actor 会員  #DDDDDD;line.bold;
-    顧客 <|-- 非会員
-    顧客 <|-- 会員
+    ' left to right direction
+    actor 利用者  #DDDDDD;line:black;line.bold;
+   
+    package 携帯システム {
+        usecase 連絡先を登録する
+        usecase 電話をかける
+    }
+    利用者 --> 連絡先を登録する
+    利用者 --> 電話をかける
 @enduml
+

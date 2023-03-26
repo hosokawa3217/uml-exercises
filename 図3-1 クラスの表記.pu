@@ -1,0 +1,13 @@
+@startuml
+  skinparam classAttributeIconSize 0
+class クラス名  << ステレオタイプ >> {
+ - 属性1 : int
+ - 属性2 : String
+ ---
+ +操作1() : void
+ +操作2() : Sring
+}
+
+hide numbers
+hide << ステレオタイプ >> circle
+@enduml

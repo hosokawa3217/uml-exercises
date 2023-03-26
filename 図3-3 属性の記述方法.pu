@@ -1,0 +1,11 @@
+@startuml
+  skinparam classAttributeIconSize 0
+class Employee {
+ - id : int = 0
+ - name : String
+ - depertment  : String  
+
+}
+
+hide Employee circle
+@enduml
