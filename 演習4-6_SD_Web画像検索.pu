@@ -1,0 +1,26 @@
+@startuml SD_Web画像検索
+hide footbox
+skinparam style strictuml /' 厳密なUMLに準拠する '/
+    actor ":ユーザ" as user
+    participant ":ブラウザ" as browser
+    participant ":Webサーバー" as WebServer
+    participant ":画像サーバー" as ImageServer
+
+    activate user
+        user -> browser:リンクボタンを押す
+        activate browser
+            browser -> WebServer:画像ファイル名を渡す
+            activate WebServer
+                WebServer -> ImageServer:画像ファイル名を探す\n命令を渡す
+
+                activate ImageServer
+                    ImageServer -> ImageServer:画像ファイルを探す
+                    ImageServer -->> WebServer:画像ファイル
+                deactivate ImageServer
+
+                WebServer -->> browser:HTMLと画像ファイル
+            deactivate WebServer
+            browser -->> user:画像の閲覧
+    deactivate user
+
+@enduml

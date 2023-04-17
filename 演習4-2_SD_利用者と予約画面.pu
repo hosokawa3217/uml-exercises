@@ -1,0 +1,19 @@
+@startuml
+hide footbox
+ /' 厳密なUMLに準拠する '/
+skinparam style strictuml
+participant "user:利用者" as user
+participant ":予約画面" as yoyaku
+
+activate  user
+user ->> yoyaku : ログイン()
+  activate  yoyaku
+    yoyaku -> yoyaku : 認証()
+    activate  yoyaku
+    ' yoyaku --> yoyaku 
+  deactivate  yoyaku
+
+deactivate user
+
+@enduml
+

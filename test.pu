@@ -1,7 +1,15 @@
 @startuml ユースケース図
-actor 顧客  #DDDDDD;line.bold;
-actor 非会員 #DDDDDD;line.bold;
-actor 会員  #DDDDDD;line.bold;
-顧客 <|-- 非会員
-顧客 <|-- 会員
+' actor 顧客  #DDDDDD;line.bold;
+' actor 非会員 #DDDDDD;line.bold;
+' actor 会員  #DDDDDD;line.bold;
+' 顧客 <|-- 非会員
+' 顧客 <|-- 会員
+
+left to right direction
+usecase 経費を登録する as t
+usecase "経費を申請/却下する" as s
+usecase 本人認証する
+s --> 本人認証する :<<include>>
+t --> 本人認証する :<<include>>
+
 @enduml

@@ -1,0 +1,32 @@
+@startuml 診察記録
+    left to right direction
+    class 患者 {
+        - id : int
+        - name : String
+        -docter_id : int
+    }  
+
+    class 医師 {
+        - id : int
+        - name : String
+        - affiliation : String
+    }
+
+    class 診察記録 {
+        - id : int
+        - patient : int
+        - docter : int
+        - day : Date
+    }
+
+    class 医局 {
+        - id : int
+        - name : String
+    }
+
+    医師 "1" -- "*" 患者
+    医師 "1" -- "*" 診察記録:作成する >
+    患者 "1" -- "*" 診察記録
+    医局 "1" <-- "*" 医師:所属 <
+
+@enduml

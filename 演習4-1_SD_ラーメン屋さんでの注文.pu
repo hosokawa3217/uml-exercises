@@ -1,0 +1,26 @@
+@startuml
+hide footbox
+
+skinparam style strictuml /' 厳密なUMLに準拠する '/
+Actor ":客" as customer
+participant ":フロア店員" as clerk
+participant ":料理人" as cook
+
+
+activate  customer
+  customer -> clerk:ラーメンを注文する
+
+    activate  clerk
+      clerk -> cook:調理を指示する
+      activate  cook
+        cook -> cook : 料理する
+      clerk <<-- cook:ラーメン
+      deactivate cook
+    
+  customer <<-- clerk:ラーメン
+  deactivate clerk
+  
+deactivate customer
+
+@enduml
+

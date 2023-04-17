@@ -1,0 +1,23 @@
+@startuml　アクティビティ図の例
+start
+  :action A;
+fork
+  if (color) is (<color:red>red) then 
+  #pink:action B;
+  else (<color:blue>blue) 
+  #LightSkyBlue:action C;
+  endif
+
+fork again
+  :action D;
+  :オブジェクト>
+   :オブジェクト|
+   :オブジェクト}
+   
+  :action F;
+end fork 
+
+ :action F;
+
+stop
+@enduml

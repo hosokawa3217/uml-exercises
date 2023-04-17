@@ -1,0 +1,43 @@
+@startuml
+hide footbox
+skinparam style strictuml /' 厳密なUMLに準拠する '/
+
+actor ":会員" as member
+participant ":商品検索画面" as screen <<boundary>>
+participant ":商品検索コントローラ" as control <<control>>
+
+activate member
+member -> screen:商品検索（商品番号）
+
+    activate screen
+     screen -> control:商品検索（商品番号）
+        
+        activate control
+            create ":商品" as goods <<entity>>
+            control -->> goods:<< create >> 生成()
+            ' activate goods
+            ' deactivate goods
+
+            loop 商品カテゴリ数
+                create ":商品カテゴリ" as category <<entity>>
+                control -->> category:<< create >> 生成() 
+                ' activate category
+                ' deactivate category
+
+                control -> goods : 商品カテゴリ設定()
+                activate goods
+                deactivate goods
+                
+            end loop
+
+        control -->> screen : 商品情報
+        deactivate control
+
+        screen -> screen : 商品情報表示(商品情報)
+        activate screen
+        deactivate screen
+    deactivate screen
+deactivate member
+
+@enduml
+

@@ -1,0 +1,27 @@
+@startuml SD_Web画像検索
+hide footbox
+skinparam style strictuml /' 厳密なUMLに準拠する '/
+    actor ":利用者" as user
+    participant ":予約画面" as yoyaku_screen
+    participant ":データ更新コントローラ" as control
+    participant ":予約" as yoyaku
+    participant ":ホテル" as hotel
+
+    activate user
+        user -> yoyaku_screen:予約キャンセル()
+        activate yoyaku_screen
+            yoyaku_screen -> control:データ更新()
+            activate control
+                control -> hotel:予約キャンセル()
+
+                activate hotel
+                    hotel -> hotel:削除処理()
+                    activate hotel
+                    deactivate hotel
+                    hotel ->x yoyaku:<<destroy>>
+                deactivate yoyaku
+
+            deactivate control
+    deactivate user
+
+@enduml

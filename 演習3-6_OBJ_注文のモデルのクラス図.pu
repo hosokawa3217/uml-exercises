@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+class 顧客 {
+    氏名
+    住所
+}
+class 注文 {
+    注文日
+    数量
+}
+class 商品 {
+    商品名
+    型式
+}
+class 重要顧客{
+
+}
+
+顧客 "1" -- "*" 注文
+注文 "*" -- "1" 商品
+顧客 <|-down- 重要顧客
+
+
+@enduml

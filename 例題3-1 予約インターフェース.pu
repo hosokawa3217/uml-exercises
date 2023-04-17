@@ -1,0 +1,14 @@
+
+@startuml 
+
+  interface "予約入力" as yi {
+    +予約が入力された
+  }
+  class "画面マネージャ" as g {
+    ---
+    ' +予約が入力された
+  }
+
+yi <|-- g
+
+@enduml

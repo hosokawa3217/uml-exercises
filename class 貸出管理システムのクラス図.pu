@@ -1,0 +1,18 @@
+@startuml
+
+left to right direction
+
+
+class "空車リスト" as k {
+   - 日付 : Date
+}
+
+class "車" as car {
+    - 管理番号:int
+    - 車種:String
+    - 貸出料金:int
+}
+
+k "*" o-- "*" car
+
+@enduml

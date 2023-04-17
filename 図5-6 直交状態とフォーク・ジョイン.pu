@@ -1,0 +1,19 @@
+@startuml 
+left to right direction
+
+state fork1 <<fork>>
+state join1 <<join>>
+
+state 電車で通勤中 {
+    state 移動中
+    state 読書中
+}
+[*] --> fork1
+fork1--> 移動中
+fork1--> 読書中
+移動中--> join1
+読書中--> join1
+
+join1 --> [*]
+
+@enduml

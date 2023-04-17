@@ -1,0 +1,22 @@
+@startuml
+
+class Word {
+---
++ enter():void
+}
+
+class Excel {
+---
++ enter():void
+}
+
+circle "keyboard" as I1
+Word --( I1 
+Excel --( I1 
+
+class User {
+
+}
+I1 <-- User:<< use >>
+
+@enduml

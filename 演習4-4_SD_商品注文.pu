@@ -1,0 +1,34 @@
+@startuml
+hide footbox
+skinparam style strictuml /' 厳密なUMLに準拠する '/
+
+actor ":受注者" as order_clerk
+participant ":注文登録画面" as reg_control <<boundary>>
+participant ":商品" as goods  <<entity>>
+
+activate order_clerk
+order_clerk -> reg_control:商品情報確認（）
+
+activate reg_control
+    activate goods
+        reg_control -> goods:商品情報取得（）
+        reg_control <<-- goods:商品情報
+    deactivate goods
+
+     reg_control -> reg_control:商品情報表示（商品情報）
+    activate reg_control
+    deactivate reg_control
+
+deactivate reg_control
+
+order_clerk -> reg_control:商品登録（注文情報）
+activate reg_control
+    create ":注文" as order <<entity>>
+    reg_control -->> order:生成する（）<<create>>
+   activate order
+
+deactivate order_clerk
+
+
+@enduml
+
