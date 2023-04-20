@@ -1,0 +1,13 @@
+
+start
+
+repeat
+    :ユーザ名を入力;
+    :パスワード入力;
+repeat while (認証) -> [認証失敗]
+
+:予約する; 
+
+stop
+
+@enduml

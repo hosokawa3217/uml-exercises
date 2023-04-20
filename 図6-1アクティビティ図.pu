@@ -1,23 +1,41 @@
-@startuml　アクティビティ図の例
+@startuml アクティビティ図の例
+
+|Swimlane1|
+|Swimlane1|
+|Swimlane2|
+|Swimlane2|
+|Swimlane3|
+|Swimlane3|
+
+|Swimlane2|
 start
   :action A;
 fork
-  if (color) is (<color:red>red) then 
+|Swimlane1|
+  if () is (<color:red>条件1) then 
   #pink:action B;
-  else (<color:blue>blue) 
+|Swimlane1|
+  else (<color:blue>条件2) 
+|Swimlane2|
   #LightSkyBlue:action C;
+|Swimlane2|
   endif
 
 fork again
-  :action D;
-  :オブジェクト>
-   :オブジェクト|
-   :オブジェクト}
-   
-  :action F;
+|Swimlane3|
+ :action D;
+  :オブジェクト]
+  :action E;
+|Swimlane3|
+ 
+|Swimlane2|
 end fork 
+|Swimlane2|
+ 
 
+|Swimlane2|
  :action F;
 
 stop
+|Swimlane2|
 @enduml

@@ -1,0 +1,11 @@
+@startuml アクティビティ図の例
+
+ :(ビデオを借りる);
+
+  if () is (<color:red>[会員登録している]) then 
+  #pink:入会金を支払う;
+  else (<color:blue>[会員登録をしていない]) 
+  #LightSkyBlue:貸出料金を支払う;
+  endif
+
+@enduml

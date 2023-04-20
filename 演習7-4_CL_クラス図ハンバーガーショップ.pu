@@ -1,0 +1,93 @@
+@startuml ハンバーガーショップのクラス図
+
+class a {
+合計
+}
+hide a circle
+hide a methods
+
+class b {
+数量
+小計
+}
+hide b circle
+hide b methods
+
+class c {
+値引き額
+期限
+}
+hide c circle
+hide c methods
+
+class d {
+名称
+単価
+}
+hide d circle
+hide d methods
+
+class e { 
+サイズ
+}
+hide e circle
+hide e methods
+
+class f {
+種別
+}
+hide f circle
+hide f methods
+
+
+
+class h {
+    　
+}
+hide h circle
+hide h methods
+
+class j {
+    種別
+}
+hide j circle
+hide j methods
+
+class k {
+    サイズ
+}
+' hide k circle
+' hide k methods
+
+j -top-|> g
+k -top-|> g
+hide g circle
+hide g methods
+
+i -right-o j
+hide i circle
+hide i methods
+hide i fields
+
+i <|-- パン
+i <|-- 肉
+i <|-- 野菜
+i <|-- チーズ
+
+hide チーズ circle
+hide チーズ methods
+hide チーズ fields
+
+hide パン circle
+hide パン methods
+hide パン fields
+
+hide 肉 circle
+hide 肉 methods
+hide 肉 fields
+
+hide 野菜 circle
+hide 野菜 methods
+hide 野菜 fields
+
+@enduml
