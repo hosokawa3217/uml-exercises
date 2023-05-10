@@ -1,4 +1,5 @@
-@startuml 
+@startuml 入場点と退場点
+
 
 state 自動車で通勤中 {
     state entry <<entryPoint>>
@@ -9,6 +10,7 @@ state 自動車で通勤中 {
     運転中 -up-> 停止中
     停止中 -right-> exit
 }
+
 [*] --> entry
 exit -> [*]
 

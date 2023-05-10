@@ -1,0 +1,20 @@
+@startuml 演習8-3-1
+left to right direction
+
+actor 販売代理店 
+actor 部品メーカー
+actor 現在料メーカー
+
+
+rectangle A社の業務 {
+
+usecase 製品を販売する
+usecase 製品を製造する
+usecase 原材料を調達する
+}
+
+販売代理店 --> 製品を販売する
+製品を製造する <-- 部品メーカー
+原材料を調達する <-- 現在料メーカー
+
+@enduml

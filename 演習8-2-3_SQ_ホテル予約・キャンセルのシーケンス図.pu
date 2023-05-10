@@ -1,0 +1,62 @@
+@startuml 演習8-2-3_SQ_ホテル予約・キャンセルのシーケンス図.pu
+
+hide footbox
+
+participant "<u>:利用者</u>" as 利用者
+participant "<u>:予約画面</u>" as 予約画面
+participant "<u>:データ更新コントローラ</u>" as データ更新コントローラ
+participant "<u>:ホテル</u>" as ホテル
+' participant "<u>:予約</u>" as 予約
+
+
+activate 利用者
+    利用者 -> 予約画面:ログイン()
+    activate 予約画面
+            予約画面 -> 予約画面:認証()             
+            activate 予約画面
+            deactivate 予約画面
+            
+        利用者 <-- 予約画面
+    deactivate 予約画面
+
+    利用者 -> 予約画面:[認証成功]
+    activate 予約画面
+        予約画面 -> データ更新コントローラ:データ更新()  
+
+        activate データ更新コントローラ
+            データ更新コントローラ -> ホテル:予約() 
+
+            activate ホテル
+                create "<u>:予約</u>" as 予約
+                ホテル -> 予約 :<<create>>
+
+                ホテル -> ホテル   :予約登録()          
+                    activate ホテル
+                    deactivate ホテル
+
+            deactivate ホテル
+        deactivate データ更新コントローラ
+    deactivate 予約画面
+
+    利用者 -> 予約画面:予約キャンセル()
+    activate 予約画面
+        予約画面 -> データ更新コントローラ:データ更新()
+        
+        activate データ更新コントローラ
+            データ更新コントローラ -> ホテル:予約キャンセル()
+            activate ホテル
+                ホテル -> ホテル:予約削除()
+                activate ホテル
+                deactivate ホテル
+        
+                ホテル -> 予約
+                destroy 予約
+                
+            deactivate ホテル
+
+        deactivate データ更新コントローラ
+         
+    deactivate 予約画面
+
+deactivate 利用者
+@enduml

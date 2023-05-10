@@ -1,13 +1,14 @@
-@startuml
+@startuml 図4-7 alt複合フラグメント
 hide footbox
 autonumber /'メッセージに自動で番号を降る '/
 skinparam style strictuml /' 厳密なUMLに準拠する '/
 
 Actor 顧客 as user
-participant ":入力画面" as input
-participant ":貸出コントローラ" as control
+participant ":<u>入力画面</u>" as input
+participant ":<u>貸出コントローラ</u>" as control
 
 user -> input : データ入力
+
 activate  input
 
   alt 登録会員

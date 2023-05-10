@@ -1,9 +1,9 @@
-@startuml
+@startuml 図4-6「ref」を使用した例
 hide footbox
 Actor 登録会員 as member
 participant ":ログイン画面" as login
 participant ":ログインコントローラ" as control
-participant "会員情報" as entity
+' participant "会員情報" as entity
 
  'メッセージに自動で番号を降る
  autonumber
@@ -12,9 +12,9 @@ skinparam style strictuml
 
 
 ' refの枠線
-skinparam sequenceReferenceBorderColor red
+' skinparam sequenceReferenceBorderColor red
 ' refの背景色
-skinparam sequenceReferenceBackgroundColor white
+skinparam sequenceReferenceBackgroundColor skyblue
 
 ' skinparam sequenceReferenceHeaderBackgroundColor lightblue
 
@@ -29,8 +29,10 @@ activate  login
     login -> control : ログイン情報検証
 
     activate control
-    create entity
-    control -->> entity :<<create>>\n 3:
+
+   
+    create "会員情報" as entity
+    control -->> entity :<<create>>
 
     ref over control, entity
         入力情報チェック

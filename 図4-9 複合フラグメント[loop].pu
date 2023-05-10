@@ -1,4 +1,4 @@
-@startuml
+@startuml 図4-9 loop複合フラグメント
 hide footbox
 
 skinparam style strictuml /' 厳密なUMLに準拠する '/

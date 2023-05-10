@@ -1,10 +1,10 @@
 <mxfile host="65bd71144e">
     <diagram id="X7Kg_GGl_vjWaTGcpSJR" name="ページ1">
-        <mxGraphModel dx="329" dy="314" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="885" dy="495" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="14" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="14" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="110" y="357.5" width="70" height="25" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;endArrow=none;endFill=0;" parent="1" source="3" target="4" edge="1">
@@ -52,28 +52,28 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="15" value="&lt;span style=&quot;font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;５：画像ファイル&lt;/span&gt;" style="endArrow=classic;html=1;strokeColor=default;align=left;dashed=1;dashPattern=8 8;" edge="1" parent="1">
+                <mxCell id="15" value="&lt;span style=&quot;font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;５：画像ファイル&lt;/span&gt;" style="endArrow=classic;html=1;strokeColor=default;align=left;dashed=1;dashPattern=8 8;" parent="1" edge="1">
                     <mxGeometry x="-1" y="58" width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="280" y="310" as="sourcePoint"/>
                         <mxPoint x="390" y="280" as="targetPoint"/>
                         <mxPoint x="-35" y="26" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="16" value="4：画像ファイルを探す" style="endArrow=classic;html=1;" edge="1" parent="1">
+                <mxCell id="16" value="4：画像ファイルを探す" style="endArrow=classic;html=1;" parent="1" edge="1">
                     <mxGeometry x="-1" y="-25" width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="90" y="405" as="sourcePoint"/>
                         <mxPoint x="90" y="335" as="targetPoint"/>
                         <mxPoint x="-25" y="25" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="17" value="&lt;span style=&quot;font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;６：HTMLと画像ファイル&lt;/span&gt;" style="endArrow=classic;html=1;strokeColor=default;align=left;dashed=1;dashPattern=8 8;" edge="1" parent="1">
+                <mxCell id="17" value="&lt;span style=&quot;font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;６：HTMLと画像ファイル&lt;/span&gt;" style="endArrow=classic;html=1;strokeColor=default;align=left;dashed=1;dashPattern=8 8;" parent="1" edge="1">
                     <mxGeometry x="1" y="72" width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="460" y="220" as="sourcePoint"/>
                         <mxPoint x="345" y="190" as="targetPoint"/>
                         <mxPoint x="-47" y="-40" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="18" value="&lt;span style=&quot;font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;７：画像の閲覧&lt;/span&gt;" style="endArrow=classic;html=1;strokeColor=default;align=left;dashed=1;dashPattern=8 8;" edge="1" parent="1">
+                <mxCell id="18" value="&lt;span style=&quot;font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;７：画像の閲覧&lt;/span&gt;" style="endArrow=classic;html=1;strokeColor=default;align=left;dashed=1;dashPattern=8 8;" parent="1" edge="1">
                     <mxGeometry x="0.8333" y="20" width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="230" y="160" as="sourcePoint"/>
                         <mxPoint x="110" y="160" as="targetPoint"/>

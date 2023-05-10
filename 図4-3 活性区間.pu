@@ -1,4 +1,4 @@
-@startuml
+@startuml 図４－３
  hide footbox
 participant ":ログイン画面" as boundary
 participant ":ログインコントローラ" as control

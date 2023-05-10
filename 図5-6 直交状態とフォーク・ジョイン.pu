@@ -1,4 +1,4 @@
-@startuml 
+@startuml 電車で通勤中
 left to right direction
 
 state fork1 <<fork>>
