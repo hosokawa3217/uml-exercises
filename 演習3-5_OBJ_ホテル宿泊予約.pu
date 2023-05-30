@@ -1,0 +1,36 @@
+@startuml オブジェクト図
+left to right direction
+object "<u>ホテルUML: ホテル" as hottel{
+- 部屋
+}
+object "<u>宿泊客1: 宿泊客" as person1 {
+- 名前=Aさん
+- 住所
+- 電話番号
+}
+object "<u>宿泊客2: 宿泊客" as person2{
+- 名前=Bさん
+- 住所
+- 電話番号
+}
+object "<u>301号室: 客室" as room1{
+- タイプ=シングル
+- 価格=11000
+- キャンペーン価格=9000
+}
+object "<u>302号室: 客室" as room2{
+- タイプ=シングル
+- 価格=11000
+- キャンペーン価格=9000
+}
+object "<u>303号室: 客室" as room3{
+- タイプ=シングル
+- 価格=11000
+- キャンペーン価格=9000
+}
+hottel-- room1
+hottel-- room2
+hottel-- room3
+person1-- room1
+person2-- room3
+@enduml

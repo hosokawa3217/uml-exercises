@@ -2,9 +2,9 @@
 hide footbox
 
 skinparam style strictuml /' 厳密なUMLに準拠する '/
-Actor ":客" as customer
-participant ":フロア店員" as clerk
-participant ":料理人" as cook
+Actor "<u>:客</u>" as customer
+participant "<u>:フロア店員</u>" as clerk
+participant "<u>:料理人</u>" as cook
 
 
 activate  customer

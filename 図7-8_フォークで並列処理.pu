@@ -1,23 +1,20 @@
 @startuml 並列処理
 title フォークで並列処理
-
 start
-
 :アクティビティA;
-
 fork
     :アクティビティB;
-    fork
-        :アクティビティC;
-    fork again
-        :アクティビティD;
-    end fork
+    ' fork
+    '     :アクティビティC;
+    ' fork again
+    '     :アクティビティD;
+    ' end fork
 fork again
-
     :アクティビティE;
-  
-end fork
+fork again
+    :アクティビティH;
 
+end fork
 :アクティビティF;
 
 stop

@@ -2,8 +2,8 @@
 hide footbox
 skinparam style strictuml /' 厳密なUMLに準拠する '/
 
-participant ":データ更新コントローラ" as control <<control>>
-participant ":ホテル" as hotel <<hotel>>
+participant "control:データ更新コントローラ" as control
+participant "hotel:ホテル" as hotel
 
 activate control
 control -> hotel : 予約する()

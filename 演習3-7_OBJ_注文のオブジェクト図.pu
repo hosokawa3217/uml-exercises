@@ -1,0 +1,51 @@
+@startuml オブジェクト図
+left to right direction
+object "<u>高橋洋平: 重要顧客" as takahashi{
+氏名=高橋洋平
+住所
+}
+object "<u>高田理恵: 顧客" as takada{
+氏名=高田理恵
+住所
+}
+object "<u>大坪直之: 顧客" as ootubo{
+氏名=大坪直之
+住所
+}
+object "<u>注文1: 注文" as order1{
+注文日=11月21日
+数量=1
+}
+object "<u>注文2: 注文" as order2{
+注文日=11月21日
+数量=2
+}
+
+object "<u>注文3: 注文" as order3{
+注文日=12月23日
+数量=1
+}
+
+object "<u>テレビ:商品" as テレビ{
+商品名=○○○
+型式=V12345
+}
+
+object "<u>冷蔵庫:商品" as 冷蔵庫 {
+商品名=▲▲▲
+型式=R8765
+}
+
+object "<u>プロジェクタ:商品" as プロジェクタ {
+商品名=◇◇◇
+型式=P1122
+}
+takahashi--order1
+order1-- 冷蔵庫
+takahashi--order2
+order2-- テレビ
+
+takada -- order3
+order3-- 冷蔵庫
+
+@enduml

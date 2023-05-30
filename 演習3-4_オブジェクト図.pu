@@ -1,0 +1,17 @@
+@startuml ユースケース図
+left to right direction
+object "<u>車1: 車" as car {
+}
+object "<u>タイヤ1:タイヤ" as taiya1{
+}
+object "<u>タイヤ2:タイヤ" as taiya2{
+}
+object "<u>タイヤ3:タイヤ" as taiya3{
+}
+object "<u>タイヤ4:タイヤ" as taiya4{
+}
+car-- taiya1
+car-- taiya2
+car-up- taiya3
+car-up- taiya4
+@enduml
