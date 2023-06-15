@@ -1,0 +1,11 @@
+@startuml 演習6-5-2
+    actor ユーザー
+    actor 左右モーター
+    actor 光センサー
+    rectangle ライトレーサーシステム{
+        usecase (ライン右境界線上を進む) as text1
+    }
+    ユーザー-right->text1
+    左右モーター-left->text1
+    光センサー-up->text1
+@enduml

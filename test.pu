@@ -8,7 +8,6 @@
         usecase キャンペーン価格
         usecase (<u>予約</u>\n拡張点\nキャンペーン中) as input 
     }
-
     利用者 --> input
     input .> キャンペーン価格: <<include>>
     キャンペーン .> input: <<extend>>   

@@ -1,0 +1,8 @@
+@startuml 自動販売機のクラス図
+' left to right direction
+
+自動販売機 *-down- "10" ボタン
+自動販売機 *-down- "1" 料金装置
+自動販売機 *-down- "1" ベンダー装置
+
+@enduml

@@ -1,0 +1,19 @@
+@startuml 演習2-2
+    left to right direction
+    actor "患者（受診者でも可）" as k
+    actor 看護師
+    
+    rectangle 診察予約システム {
+        usecase メニュー
+        usecase 今の順番
+        usecase あなたの順番
+        usecase 予約と確認
+        
+    }
+    k -- メニュー
+    k -- 予約と確認
+    k -- あなたの順番
+    k -- 今の順番
+    
+    看護師 -up- 今の順番
+@enduml
